@@ -23,7 +23,7 @@ Here a unitary matrix operation U on n qubits is decomposed into simpler gates c
 
 **script:** [gate-decompose.py](https://github.com/vr100/quantum-gd/blob/main/scripts/gate-decompose.py), [gate-decompose-qsd.py](https://github.com/vr100/quantum-gd/blob/main/scripts/gate-decompose-qsd.py)
 
-** References **
+**References:**
 
 * Synthesis of Quantum Logic Circuits ([link](https://arxiv.org/abs/quant-ph/0406176))
 
