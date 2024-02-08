@@ -1,5 +1,5 @@
 from qiskit import *
-from qiskit.providers.aer import Aer
+from qiskit_aer import Aer
 import numpy as np
 import math, time, scipy, cmath, random, itertools, copy
 from operator import itemgetter
@@ -150,7 +150,8 @@ def build_decompose(U):
 
 def execute_circuit(qc):
   backend = Aer.get_backend('statevector_simulator')
-  job_sim = execute(qc, backend)
+  qc = transpile(qc, backend=backend)
+  job_sim = backend.run(qc)
   result_sim = job_sim.result()
   sv = result_sim.get_statevector(qc)
   probs = sv.probabilities_dict()
